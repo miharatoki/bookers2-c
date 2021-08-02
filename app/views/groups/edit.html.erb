@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="rwo">
+    <div class="col-md-4 px-5 px-sm-0 mx-auto">
+      <h2>Editing Group</h2>
+      <%= form_with model: @group, local: true do |f| %>
+        <%= f.label :グループ名 %><br />
+        <%= f.text_field :name %><br />
+        <%= f.label :紹介文 %><br />
+        <%= f.text_area :introduction %><br />
+        <%= f.label :グループ画像 %><br />
+        <%= f.attachment_field :image %><br />
+        <%= f.submit "Create Group", class: "btn btn-info btn-sm" %>
+      <% end %>
+    </div>
+  </div>
+</div>
